@@ -1,3 +1,15 @@
-<div class="section">
+---
+const { style } = Astro.props
+---
+
+<div class="section" style={style}>
     <slot/>
 </div>
+
+<style>
+    .section {
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+    }
+</style>

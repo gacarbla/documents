@@ -1,3 +1,33 @@
-<span>
-    <slot/>
-</span>
+---
+const { route } = Astro.props;
+---
+
+<a href={route}>
+    <span>
+        <slot />
+    </span>
+</a>
+
+<style>
+    :root {
+        --text-color: #ddd;
+        --text-bg-color: #fff1;
+        --text-hover-color: #ccc;
+    }
+    a {
+        font-family: Arial;
+        font-size: 20px;
+        transition: all .3s;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    a:any-link {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+    a:hover {
+        color: var(--text-hover-color);
+        transform: translateY(5px);
+        background-color: var(--text-bg-color);
+    }
+</style>

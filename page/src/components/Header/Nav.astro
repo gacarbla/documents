@@ -1,0 +1,25 @@
+---
+import { default as directories } from '../../routes/nav.json';
+import NavItem from './NavItem.astro'
+---
+
+<nav>
+    <ul>
+        {directories.map((item:any) => (
+            <NavItem route={item.href}>
+                {item.label}
+            </NavItem>
+        ))}
+    </ul>
+</nav>
+
+<style>
+    nav, nav > ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 20px;
+    }
+</style>

@@ -1,7 +1,60 @@
 ---
-import Section from './Section.astro'
+import Section from "./Section.astro";
+import Card from "./Card.astro";
 ---
 
+<!-- TÍTULO ---------------------------------------------->
+<Section style="height: 50vh">
+  <p class="title">gacarbla</p>
+  <style>
+    :root {
+      --title-color: #fff5;
+      --title-size: 78px;
+    }
+    * {
+      font-family: Arial;
+    }
+    p.title {
+      position: relative;
+      top: 50px;
+      width: 100vw;
+      text-align: center;
+      color: var(--title-color);
+      font-size: var(--title-size);
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin: 0;
+      animation: infinite titlebreath 10s;
+    }
+    @keyframes titlebreath {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(15px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  </style>
+</Section>
+
+<!-- TARJETAS -------------------------------------------->
+
 <Section>
-	<p>Test</p>
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+  <Card class="flex flex-col items-center gap-y-2">
+    <div class="text-center">
+      <h3
+        class="text-xl font-semibold text-transparent bg-gradient-to-l from-cyan-500 to-white to-60% bg-clip-text"
+      >
+	  Discord Dates
+      </h3>
+      <p class="text-zinc-300">
+		Herramienta de gran utilidad para compartir fechas u horas en formato internacional.
+	  </p>
+    </div>
+  </Card>
+	</div>
 </Section>
