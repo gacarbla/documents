@@ -1,0 +1,16 @@
+[
+    {
+        "name": "users",
+        "keyPath": "id",
+        "indices": [
+            { "name": "username",  "keyPath": "username",   "unique": true  },
+            { "name": "email",     "keyPath": "email",      "unique": true  },
+            { "name": "phone",     "keyPath": "phone",      "unique": true  },
+            { "name": "name",      "keyPath": "name",       "unique": false },
+            { "name": "surnames",  "keyPath": "surnames",   "unique": false },
+            { "name": "age",       "keyPath": "age",        "unique": false },
+            { "name": "country",   "keyPath": "country",    "unique": false },
+            { "name": "language",  "keyPath": "language",   "unique": false }
+        ]
+    }
+]
