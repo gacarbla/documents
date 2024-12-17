@@ -21,6 +21,15 @@ import Header from '../components/Header.astro'
 	:root {
 		--background: #000;
 	}
+	* {
+		user-select: none;
+		-ms-user-select: none;
+		-ms-touch-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-moz-window-dragging: none;
+	}
 	html {
 		margin: 0;
 		width: 100%;
@@ -30,6 +39,7 @@ import Header from '../components/Header.astro'
 	body {
 		margin: 0;
 		width: 100%;
+		padding: 0px 20vw;
 		height: 100%;
 		background-color: transparent;
 	}

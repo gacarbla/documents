@@ -1,10 +1,12 @@
 ---
 import Section from "./Section.astro";
 import Card from "./Card.astro";
+
+import { cardsProjects } from '../consts/projectCards'
 ---
 
 <!-- TÍTULO ---------------------------------------------->
-<Section style="height: 50vh">
+<Section style="height: 200px">
   <p class="title">gacarbla</p>
   <style>
     :root {
@@ -17,7 +19,7 @@ import Card from "./Card.astro";
     p.title {
       position: relative;
       top: 50px;
-      width: 100vw;
+      width: 100%;
       text-align: center;
       color: var(--title-color);
       font-size: var(--title-size);
@@ -42,19 +44,50 @@ import Card from "./Card.astro";
 
 <!-- TARJETAS -------------------------------------------->
 
-<Section>
-	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-  <Card class="flex flex-col items-center gap-y-2">
-    <div class="text-center">
-      <h3
-        class="text-xl font-semibold text-transparent bg-gradient-to-l from-cyan-500 to-white to-60% bg-clip-text"
-      >
-	  Discord Dates
-      </h3>
-      <p class="text-zinc-300">
-		Herramienta de gran utilidad para compartir fechas u horas en formato internacional.
-	  </p>
-    </div>
-  </Card>
-	</div>
+<Section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3" style="max-width: 1000px;">
+    {
+      cardsProjects.map(({ Icon, label, content, color }) => {
+        let iconColor = "";
+        switch (color) {
+          case "cyan":
+            iconColor = "text-cyan-500 bg-cyan-500/20 rounded-full p-2";
+            break;
+          case "emerald":
+            iconColor = "text-emerald-500 bg-emerald-500/20 rounded-full p-2";
+            break;
+          case "yellow":
+            iconColor = "text-yellow-500 bg-yellow-500/20 rounded-full p-2";
+            break;
+          case "purple":
+            iconColor = "text-purple-500 bg-purple-500/20 rounded-full p-2";
+            break;
+          case "orange":
+            iconColor = "text-orange-500 bg-orange-500/20 rounded-full p-2";
+            break;
+          case "teal":
+            iconColor = "text-teal-500 bg-teal-500/20 rounded-full p-2";
+            break;
+          default:
+            iconColor = "text-cyan-500";
+            break;
+        }
+        return (
+          <Card class="flex flex-col items-center gap-y-2">
+            <Icon class={`size-12 ${iconColor}`} />
+            <div class="text-center">
+              <h3 class="text-xl font-semibold text-transparent bg-gradient-to-l from-cyan-500 to-white to-60% bg-clip-text">
+                {label}
+              </h3>
+              <p class="text-zinc-300">{content}</p>
+            </div>
+          </Card>
+        );
+      })
+    }
+  </div>
+</Section>
+
+<Section style="min-height: 100px;">
+
 </Section>
