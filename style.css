@@ -1,10 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/whitney-2');
-
 * {
-    font-family: whitney;
+    font-family: Arial;
 }
 
-body {
+:not(.select) {
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -12,123 +10,132 @@ body {
     -ms-user-select: none;
 }
 
-.select {
-    user-select: auto;
-    -webkit-user-select: auto;
-    -khtml-user-select: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #181818;
 }
 
-body {
-    background-color: #222;
+body > *:not(script) {
+    width: calc(100%);
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    padding-top: 60px;
+    align-items: center;
+    justify-content: center;
 }
 
-h1 {
+.content {
+    width: 600px;
+    max-width: calc(100vw - 40px);
     color: #fff;
 }
 
-body>p {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    color: #f00;
+.content.main {
+    margin-top: 60px;
 }
 
-.folders {
-    display: grid;
-    gap: 10px;
-    --grid-layout-gap: 10px;
-    --grid-column-count: 4;
-    --grid-item--min-width: 350px;
-    --gap-count: calc(var(--grid-column-count) - 1);
-    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
-    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
-    grid-gap: var(--grid-layout-gap);
+.content.main > h1 {
+    margin: 20px 0px 40px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
 }
 
-.folder {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    background-color: #0002;
-    border-radius: 5px;
-    padding: 0px 10px;
-    min-width: 300px;
-    overflow: hidden;
-    color: #fff
+.content.main > h2 {
+    margin: 70px 0px 20px 0px;
+    width: 100%;
+    font-size: 30px;
+    font-style: italic;
+    opacity: .5;
 }
 
-.folder:hover {
-    background-color: #0004;
-}
-
-.folder img {
-    width: 30px;
+.content.main > .social > div > svg {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #fff;
+    stroke-width: 2;
     height: 30px;
 }
 
-a,
-a:link,
-a:active,
-a:visited {
-    text-decoration: none;
+.content.main > .social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-a:hover {
-    text-decoration: underline 2px #0063a5;
+.content.main > .social .media {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff3;
+    border-radius: 5px;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.content.main > .social .media > p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.content.main > .projectgrid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, 295px);
+}
+
+.content.main > .projectgrid > * {
+    width: 100%;
+}
+
+.content.main > .documentations > .projectbox {
+    border: 2px solid #555;
+    background-color: #111;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    cursor: pointer;
+}
+
+.content.main > .documentations > .projectbox > .image {
+    background-color: #fff2;
+    border-radius: 5px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    left: 5px;
+}
+
+.content.main > .documentations > .projectbox > .title {
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    left: 70px;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 header {
-    background: black;
-    max-height: 50px;
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    padding: 20px;
-    color: #fff
+    background-color: #090909;
+    min-height: 60px;
 }
 
-header ul {
-    margin: 0px;
-    list-style: none;
+footer {
+    background-color: #121212;
+    min-height: 50px;
     display: flex;
-    flex-direction: row;
-    padding: 0px;
-}
-
-header li::before {
-    content: "/";
-    margin: 10px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:link {
-    color: #0076c5;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #3ab0ff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0077c7;
-    text-decoration: underline 2px #0063a5;
-}
-
-a:active {
-    color: #0076c5;
-    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
 }

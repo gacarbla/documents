@@ -1,0 +1,91 @@
+.radial-gradient-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    filter: blur(80px);
+}
+
+.circle-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 200px at 98% 20%, #ffb30260, transparent);
+    opacity: 0.7;
+    animation: infinite breath 10s ease-in-out;
+}
+
+.circle-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 200px at 3% 20%, #118c9260, transparent);
+    opacity: 0.7;
+    animation: infinite breath 15s ease-in-out;
+}
+
+.circle-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 300px at 5% 50%, #da1aef60, transparent);
+    opacity: 0.7;
+    animation: infinite breath 25s ease-in-out;
+}
+
+.circle-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 250px at 95% 45%, #f2ff0260, transparent);
+    opacity: 0.7;
+    animation: infinite breath 10s ease-in-out;
+}
+
+.circle-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 200px at 95% 65%, #3bff1060, transparent);
+    opacity: 0.7;
+    animation: infinite breath 30s ease-in-out;
+}
+
+.circle-6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle 150px at 10% 75%, #ff000060, transparent);
+    opacity: 0.7;
+    animation: infinite breath 35s ease-in-out;
+}
+
+@keyframes breath {
+    0% {
+        transform: translateY(100px);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}

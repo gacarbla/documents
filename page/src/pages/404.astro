@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Gradient from '../components/Backgrounds/Gradient.astro';
+---
+
+<Layout>
+    <Gradient/>
+	<h1 class="title404">404</h1>
+    <p class="text404">Página no encontrada.</p>
+    <style>
+        .title404 {
+            text-align: center;
+            font-size: 25rem;
+            font-weight: bolder;
+            color: #fff3;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0;
+        }
+        .text404 {
+            color: #fff3;
+            width: 100%;
+            position: absolute;
+            bottom: 150px;
+            font-size: 3rem;
+            left: 0px;
+            right: 0px;
+            text-align: center;
+        }
+    </style>
+</Layout>
