@@ -10,6 +10,7 @@ interface CardCommunity {
     label: string;
     content: string;
     color: string;
+    url: string,
 }
 
 export const cardsProjects: CardCommunity[] = [
@@ -17,6 +18,7 @@ export const cardsProjects: CardCommunity[] = [
         Icon: Logs,
         label: "Discord Dates",
         color: "cyan",
+        url: "/projects/discord-dates",
         content:
             "Herramienta de gran utilidad para compartir fechas u horas en formato internacional.",
     },
@@ -24,6 +26,7 @@ export const cardsProjects: CardCommunity[] = [
         Icon: Logs,
         label: "Text encryptor",
         color: "emerald",
+        url: "/projects/text-encryptor",
         content:
             "Sistema de encriptación rápida y fácil de textos.",
     },
@@ -31,6 +34,7 @@ export const cardsProjects: CardCommunity[] = [
         Icon: Secure,
         label: "Mod Embed Builder",
         color: "yellow",
+        url: "/projects/mod-embed-builder",
         content:
             "Construye Embeds informativos de forma rápida y fácil.",
     },
@@ -38,6 +42,7 @@ export const cardsProjects: CardCommunity[] = [
         Icon: Secure,
         label: "Miautilidades",
         color: "purple",
+        url: "/projects/miautilidades",
         content:
             "Bot de Discord para utilidades y funciones de moderadores.",
     },
@@ -45,6 +50,7 @@ export const cardsProjects: CardCommunity[] = [
         Icon: Starts,
         label: "Miauyudante",
         color: "orange",
+        url: "/projects/miauyudante",
         content:
             "Bot de Discord para utilidades y funciones de comunidad.",
     },
@@ -52,6 +58,7 @@ export const cardsProjects: CardCommunity[] = [
         Icon: Starts,
         label: "Catto Coffee",
         color: "teal",
+        url: "/projects/catto-coffee",
         content:
             "Bot de Discord multipropósito público.",
     },
