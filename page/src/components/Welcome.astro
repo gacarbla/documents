@@ -45,9 +45,9 @@ import { cardsProjects } from '../consts/projectCards'
 <!-- TARJETAS -------------------------------------------->
 
 <Section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3" style="max-width: 1000px;">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
     {
-      cardsProjects.map(({ Icon, label, content, color }) => {
+      cardsProjects.map(({ Icon, label, content, color, url }) => {
         let iconColor = "";
         switch (color) {
           case "cyan":
@@ -73,10 +73,10 @@ import { cardsProjects } from '../consts/projectCards'
             break;
         }
         return (
-          <Card class="flex flex-col items-center gap-y-2">
+          <Card class="flex flex-col items-center gap-y-2" href={`${url}`}>
             <Icon class={`size-12 ${iconColor}`} />
             <div class="text-center">
-              <h3 class="text-xl font-semibold text-transparent bg-gradient-to-l from-cyan-500 to-white to-60% bg-clip-text">
+              <h3 class="text-xl font-semibold text-transparent bg-gradient-to-l from-white to-white to-60% bg-clip-text">
                 {label}
               </h3>
               <p class="text-zinc-300">{content}</p>
